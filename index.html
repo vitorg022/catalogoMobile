@@ -149,7 +149,11 @@
     <a href="#">Início</a>
     <a href="#">Promoções</a>
     <a href="#">Novidades</a>
-    <a href="#">Contato</a>
+    <a href="#" id="contato-link">Contato</a>
+    <div id="contato-submenu" style="display:none; background:#232323;">
+        <a href="https://wa.me/19981538851" target="_blank" style="padding-left:30px;">WhatsApp</a>
+        <a href="https://instagram.com/seu_instagram" target="_blank" style="padding-left:30px;">Instagram</a>
+    </div>
 </div>
 
 <!-- Banner -->
@@ -205,6 +209,13 @@
     function toggleMenu() {
         document.getElementById("sideMenu").classList.toggle("active");
     }
+
+    // Mostrar submenu de contato ao clicar
+    document.getElementById('contato-link').onclick = function(e) {
+        e.preventDefault();
+        var submenu = document.getElementById('contato-submenu');
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    };
 </script>
 
 </body>
